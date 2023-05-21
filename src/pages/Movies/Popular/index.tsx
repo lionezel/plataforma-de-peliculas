@@ -1,9 +1,9 @@
 import { CATEGORY } from "../../../const";
 import { MovieType, Navbar, useMoviesQuery } from "../../../shared";
-import { MovieCard } from "../../../shared/components/MovieCard";
+import { Card } from "../../../shared/components/Card";
 
 export const Populares = () => {
-  const { data, isLoading } = useMoviesQuery(CATEGORY.POPULAR);
+  const { data, isLoading } = useMoviesQuery(CATEGORY.POPULAR_MOVIE);
 
   if (isLoading) return <div>loading ...</div>;
 
@@ -13,7 +13,7 @@ export const Populares = () => {
       <p>Populares</p>
       <div style={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
         {data?.results?.map((movie: MovieType) => (
-          <MovieCard
+          <Card
             key={movie.id}
             detail={movie.id}
             title={movie.title}

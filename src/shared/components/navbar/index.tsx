@@ -33,7 +33,9 @@ export const Navbar = () => {
                 </Link>
               </MenuItem>
               <MenuItem>
+              <Link to="/temporadas">
                 <MenuItemLink>Serie</MenuItemLink>
+                </Link>
               </MenuItem>
               <MenuItem>
                 <MenuItemLink>Home</MenuItemLink>

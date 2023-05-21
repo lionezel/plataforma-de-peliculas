@@ -8,7 +8,7 @@ interface Props {
   detail: number;
 }
 
-export const MovieCard = ({ poster_path, title, detail }: Props) => {
+export const Card = ({ poster_path, title, detail }: Props) => {
 
   return (
     <>

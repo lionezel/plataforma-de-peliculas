@@ -1,28 +1,15 @@
-import { CATEGORY } from "../../const";
-import { BACKGROUND } from "../../const/image";
-import { MovieType, Navbar, useMoviesQuery } from "../../shared";
-import { MovieCard } from "../../shared/components/MovieCard";
-
+import { Navbar } from "../../shared";
+import { Discover_Movie, Discover_Tv, Media_discover } from "./components";
 
 export const Dashboard = () => {
-  const { data, isLoading } = useMoviesQuery(CATEGORY.TOP_RATED);
-
-  if (isLoading) return <div>loading ...</div>;
-
   return (
-    <>
+    <div>
       <Navbar />
-      <img src={BACKGROUND} />
-      <div style={{ display: "flex", flexWrap: "wrap", gap: 2 }}>
-        {data?.results?.map((movie: MovieType) => (
-          <MovieCard
-            key={movie.id}
-            detail={movie.id}
-            title={movie.title}
-            poster_path={movie.poster_path}
-          />
-          ))}
-      </div>
-    </>
+      <Media_discover />
+      <p>Descubre las mejores peliculas!!!</p>
+      <Discover_Movie />
+      <p>Descubre las mejores series!!!</p>
+      <Discover_Tv />
+    </div>
   );
 };

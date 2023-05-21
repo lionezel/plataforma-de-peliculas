@@ -1,7 +1,7 @@
 import { Box, styled } from "@mui/material";
 
 export const CardContainer = styled(Box)`
-  display: "flex";
+  display: flex;
   width: 200px;
   height: 300px;
   justify-content: center;
